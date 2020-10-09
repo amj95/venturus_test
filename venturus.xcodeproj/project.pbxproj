@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C521CC87252FF929007386B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CC86252FF929007386B0 /* AppDelegate.swift */; };
+		C521CC89252FF929007386B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CC88252FF929007386B0 /* SceneDelegate.swift */; };
+		C521CC8B252FF929007386B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CC8A252FF929007386B0 /* ViewController.swift */; };
+		C521CC8E252FF929007386B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C521CC8C252FF929007386B0 /* Main.storyboard */; };
+		C521CC91252FF929007386B0 /* venturus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C521CC8F252FF929007386B0 /* venturus.xcdatamodeld */; };
+		C521CC93252FF929007386B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C521CC92252FF929007386B0 /* Assets.xcassets */; };
+		C521CC96252FF929007386B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C521CC94252FF929007386B0 /* LaunchScreen.storyboard */; };
+		C521CCA1252FF92A007386B0 /* venturusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCA0252FF92A007386B0 /* venturusTests.swift */; };
+		C521CCAC252FF92A007386B0 /* venturusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCAB252FF92A007386B0 /* venturusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C521CC9D252FF92A007386B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C521CC7B252FF929007386B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C521CC82252FF929007386B0;
+			remoteInfo = venturus;
+		};
+		C521CCA8252FF92A007386B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C521CC7B252FF929007386B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C521CC82252FF929007386B0;
+			remoteInfo = venturus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C521CC83252FF929007386B0 /* venturus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = venturus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C521CC86252FF929007386B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C521CC88252FF929007386B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C521CC8A252FF929007386B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C521CC8D252FF929007386B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C521CC90252FF929007386B0 /* venturus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = venturus.xcdatamodel; sourceTree = "<group>"; };
+		C521CC92252FF929007386B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C521CC95252FF929007386B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C521CC97252FF929007386B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C521CC9C252FF92A007386B0 /* venturusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = venturusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C521CCA0252FF92A007386B0 /* venturusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = venturusTests.swift; sourceTree = "<group>"; };
+		C521CCA2252FF92A007386B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C521CCA7252FF92A007386B0 /* venturusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = venturusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C521CCAB252FF92A007386B0 /* venturusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = venturusUITests.swift; sourceTree = "<group>"; };
+		C521CCAD252FF92A007386B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C521CC80252FF929007386B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C521CC99252FF92A007386B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C521CCA4252FF92A007386B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C521CC7A252FF929007386B0 = {
+			isa = PBXGroup;
+			children = (
+				C521CC85252FF929007386B0 /* venturus */,
+				C521CC9F252FF92A007386B0 /* venturusTests */,
+				C521CCAA252FF92A007386B0 /* venturusUITests */,
+				C521CC84252FF929007386B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C521CC84252FF929007386B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C521CC83252FF929007386B0 /* venturus.app */,
+				C521CC9C252FF92A007386B0 /* venturusTests.xctest */,
+				C521CCA7252FF92A007386B0 /* venturusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C521CC85252FF929007386B0 /* venturus */ = {
+			isa = PBXGroup;
+			children = (
+				C521CC86252FF929007386B0 /* AppDelegate.swift */,
+				C521CC88252FF929007386B0 /* SceneDelegate.swift */,
+				C521CC8A252FF929007386B0 /* ViewController.swift */,
+				C521CC8C252FF929007386B0 /* Main.storyboard */,
+				C521CC92252FF929007386B0 /* Assets.xcassets */,
+				C521CC94252FF929007386B0 /* LaunchScreen.storyboard */,
+				C521CC97252FF929007386B0 /* Info.plist */,
+				C521CC8F252FF929007386B0 /* venturus.xcdatamodeld */,
+			);
+			path = venturus;
+			sourceTree = "<group>";
+		};
+		C521CC9F252FF92A007386B0 /* venturusTests */ = {
+			isa = PBXGroup;
+			children = (
+				C521CCA0252FF92A007386B0 /* venturusTests.swift */,
+				C521CCA2252FF92A007386B0 /* Info.plist */,
+			);
+			path = venturusTests;
+			sourceTree = "<group>";
+		};
+		C521CCAA252FF92A007386B0 /* venturusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C521CCAB252FF92A007386B0 /* venturusUITests.swift */,
+				C521CCAD252FF92A007386B0 /* Info.plist */,
+			);
+			path = venturusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C521CC82252FF929007386B0 /* venturus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C521CCB0252FF92A007386B0 /* Build configuration list for PBXNativeTarget "venturus" */;
+			buildPhases = (
+				C521CC7F252FF929007386B0 /* Sources */,
+				C521CC80252FF929007386B0 /* Frameworks */,
+				C521CC81252FF929007386B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = venturus;
+			productName = venturus;
+			productReference = C521CC83252FF929007386B0 /* venturus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C521CC9B252FF92A007386B0 /* venturusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C521CCB3252FF92A007386B0 /* Build configuration list for PBXNativeTarget "venturusTests" */;
+			buildPhases = (
+				C521CC98252FF92A007386B0 /* Sources */,
+				C521CC99252FF92A007386B0 /* Frameworks */,
+				C521CC9A252FF92A007386B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C521CC9E252FF92A007386B0 /* PBXTargetDependency */,
+			);
+			name = venturusTests;
+			productName = venturusTests;
+			productReference = C521CC9C252FF92A007386B0 /* venturusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C521CCA6252FF92A007386B0 /* venturusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C521CCB6252FF92A007386B0 /* Build configuration list for PBXNativeTarget "venturusUITests" */;
+			buildPhases = (
+				C521CCA3252FF92A007386B0 /* Sources */,
+				C521CCA4252FF92A007386B0 /* Frameworks */,
+				C521CCA5252FF92A007386B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C521CCA9252FF92A007386B0 /* PBXTargetDependency */,
+			);
+			name = venturusUITests;
+			productName = venturusUITests;
+			productReference = C521CCA7252FF92A007386B0 /* venturusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C521CC7B252FF929007386B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					C521CC82252FF929007386B0 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					C521CC9B252FF92A007386B0 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = C521CC82252FF929007386B0;
+					};
+					C521CCA6252FF92A007386B0 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = C521CC82252FF929007386B0;
+					};
+				};
+			};
+			buildConfigurationList = C521CC7E252FF929007386B0 /* Build configuration list for PBXProject "venturus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C521CC7A252FF929007386B0;
+			productRefGroup = C521CC84252FF929007386B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C521CC82252FF929007386B0 /* venturus */,
+				C521CC9B252FF92A007386B0 /* venturusTests */,
+				C521CCA6252FF92A007386B0 /* venturusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C521CC81252FF929007386B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C521CC96252FF929007386B0 /* LaunchScreen.storyboard in Resources */,
+				C521CC93252FF929007386B0 /* Assets.xcassets in Resources */,
+				C521CC8E252FF929007386B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C521CC9A252FF92A007386B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C521CCA5252FF92A007386B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C521CC7F252FF929007386B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C521CC8B252FF929007386B0 /* ViewController.swift in Sources */,
+				C521CC91252FF929007386B0 /* venturus.xcdatamodeld in Sources */,
+				C521CC87252FF929007386B0 /* AppDelegate.swift in Sources */,
+				C521CC89252FF929007386B0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C521CC98252FF92A007386B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C521CCA1252FF92A007386B0 /* venturusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C521CCA3252FF92A007386B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C521CCAC252FF92A007386B0 /* venturusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C521CC9E252FF92A007386B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C521CC82252FF929007386B0 /* venturus */;
+			targetProxy = C521CC9D252FF92A007386B0 /* PBXContainerItemProxy */;
+		};
+		C521CCA9252FF92A007386B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C521CC82252FF929007386B0 /* venturus */;
+			targetProxy = C521CCA8252FF92A007386B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C521CC8C252FF929007386B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C521CC8D252FF929007386B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C521CC94252FF929007386B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C521CC95252FF929007386B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C521CCAE252FF92A007386B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C521CCAF252FF92A007386B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C521CCB1252FF92A007386B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = venturus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonio.venturus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C521CCB2252FF92A007386B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = venturus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonio.venturus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C521CCB4252FF92A007386B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = venturusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonio.venturusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/venturus.app/venturus";
+			};
+			name = Debug;
+		};
+		C521CCB5252FF92A007386B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = venturusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonio.venturusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/venturus.app/venturus";
+			};
+			name = Release;
+		};
+		C521CCB7252FF92A007386B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = venturusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonio.venturusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = venturus;
+			};
+			name = Debug;
+		};
+		C521CCB8252FF92A007386B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = venturusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.antonio.venturusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = venturus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C521CC7E252FF929007386B0 /* Build configuration list for PBXProject "venturus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C521CCAE252FF92A007386B0 /* Debug */,
+				C521CCAF252FF92A007386B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C521CCB0252FF92A007386B0 /* Build configuration list for PBXNativeTarget "venturus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C521CCB1252FF92A007386B0 /* Debug */,
+				C521CCB2252FF92A007386B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C521CCB3252FF92A007386B0 /* Build configuration list for PBXNativeTarget "venturusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C521CCB4252FF92A007386B0 /* Debug */,
+				C521CCB5252FF92A007386B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C521CCB6252FF92A007386B0 /* Build configuration list for PBXNativeTarget "venturusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C521CCB7252FF92A007386B0 /* Debug */,
+				C521CCB8252FF92A007386B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C521CC8F252FF929007386B0 /* venturus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C521CC90252FF929007386B0 /* venturus.xcdatamodel */,
+			);
+			currentVersion = C521CC90252FF929007386B0 /* venturus.xcdatamodel */;
+			path = venturus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C521CC7B252FF929007386B0 /* Project object */;
+}
