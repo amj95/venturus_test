@@ -21,6 +21,9 @@
 		C521CCC6252FFCEC007386B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCC5252FFCEC007386B0 /* Constants.swift */; };
 		C521CCC82530045A007386B0 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCC72530045A007386B0 /* ImageViewCell.swift */; };
 		C521CCCB25300890007386B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCCA25300890007386B0 /* HomeView.swift */; };
+		C58492E62530C4C2001E243C /* ImgurResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492E52530C4C2001E243C /* ImgurResponse.swift */; };
+		C58492F42530DB79001E243C /* ImageRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492F32530DB79001E243C /* ImageRemoteDataSource.swift */; };
+		C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492F82530DBFD001E243C /* ImageDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		C521CCC5252FFCEC007386B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C521CCC72530045A007386B0 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		C521CCCA25300890007386B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C58492E52530C4C2001E243C /* ImgurResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurResponse.swift; sourceTree = "<group>"; };
+		C58492F32530DB79001E243C /* ImageRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteDataSource.swift; sourceTree = "<group>"; };
+		C58492F82530DBFD001E243C /* ImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		C521CC85252FF929007386B0 /* venturus */ = {
 			isa = PBXGroup;
 			children = (
+				C5CDE02F2530849200C085DF /* Data */,
 				C521CCC2252FFCA0007386B0 /* Common */,
 				C521CCB9252FFA5D007386B0 /* HomeView */,
 				C521CC86252FF929007386B0 /* AppDelegate.swift */,
@@ -192,6 +199,48 @@
 				C521CCCA25300890007386B0 /* HomeView.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		C5CDE02F2530849200C085DF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C5CDE033253084BF00C085DF /* Repository */,
+				C5CDE032253084B700C085DF /* Datasource */,
+				C5CDE031253084B100C085DF /* Remote */,
+				C5CDE0302530849E00C085DF /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C5CDE0302530849E00C085DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C58492E52530C4C2001E243C /* ImgurResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5CDE031253084B100C085DF /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C58492F32530DB79001E243C /* ImageRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C5CDE032253084B700C085DF /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				C58492F82530DBFD001E243C /* ImageDataSource.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		C5CDE033253084BF00C085DF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +377,12 @@
 				C521CCC82530045A007386B0 /* ImageViewCell.swift in Sources */,
 				C521CC91252FF929007386B0 /* venturus.xcdatamodeld in Sources */,
 				C521CC87252FF929007386B0 /* AppDelegate.swift in Sources */,
+				C58492F42530DB79001E243C /* ImageRemoteDataSource.swift in Sources */,
 				C521CCBB252FFB9F007386B0 /* HomeViewModel.swift in Sources */,
+				C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */,
 				C521CCC4252FFCBE007386B0 /* UseCase.swift in Sources */,
 				C521CCC1252FFC8E007386B0 /* GetImages.swift in Sources */,
+				C58492E62530C4C2001E243C /* ImgurResponse.swift in Sources */,
 				C521CC89252FF929007386B0 /* SceneDelegate.swift in Sources */,
 				C521CCC6252FFCEC007386B0 /* Constants.swift in Sources */,
 			);
