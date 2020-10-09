@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var refresher:UIRefreshControl!
     var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: ImagesRemoteDataSource.getInstance())))
     private var subscriptions = Set<AnyCancellable>()
+    private var dataArray: [ImageData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +56,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
 extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageViewCell
+//        cell.prepare(titulo: titleArray[indexPath.row], imagem: imageArray[indexPath.row]!)
+        return cell
     }
 }
 
