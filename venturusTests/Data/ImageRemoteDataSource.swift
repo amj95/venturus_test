@@ -11,8 +11,6 @@ import XCTest
 
 class ImageRemoteDataSource: XCTestCase {
     
-    var viewModel: HomeViewModel?
-    
     func test_successfull_request() {
         var results: [ImageData] = []
         let expectation = self.expectation(description: "waiting request")

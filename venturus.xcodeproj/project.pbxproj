@@ -25,6 +25,7 @@
 		C58492F42530DB79001E243C /* ImageRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492F32530DB79001E243C /* ImageRemoteDataSource.swift */; };
 		C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492F82530DBFD001E243C /* ImageDataSource.swift */; };
 		C58492FF2530E698001E243C /* ImageRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492FE2530E698001E243C /* ImageRemoteDataSource.swift */; };
+		C58493072530FB8F001E243C /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58493062530FB8F001E243C /* ImageRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C58492F32530DB79001E243C /* ImageRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteDataSource.swift; sourceTree = "<group>"; };
 		C58492F82530DBFD001E243C /* ImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataSource.swift; sourceTree = "<group>"; };
 		C58492FE2530E698001E243C /* ImageRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteDataSource.swift; sourceTree = "<group>"; };
+		C58493062530FB8F001E243C /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 		C5CDE033253084BF00C085DF /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				C58493062530FB8F001E243C /* ImageRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				C58492F42530DB79001E243C /* ImageRemoteDataSource.swift in Sources */,
 				C521CCBB252FFB9F007386B0 /* HomeViewModel.swift in Sources */,
 				C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */,
+				C58493072530FB8F001E243C /* ImageRepository.swift in Sources */,
 				C521CCC4252FFCBE007386B0 /* UseCase.swift in Sources */,
 				C521CCC1252FFC8E007386B0 /* GetImages.swift in Sources */,
 				C58492E62530C4C2001E243C /* ImgurResponse.swift in Sources */,
