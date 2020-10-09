@@ -11,6 +11,10 @@ import Foundation
  */
 class GetImages: UseCase {
     
+    init() {
+        
+    }
+    
     func executeUseCase(requestValues: RequestValuesProtocol, onComplete: @escaping (ResponseValueProtocol) -> Void, onError: @escaping (Constants.ComunicationError) -> Void) {
         
     }
