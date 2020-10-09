@@ -26,6 +26,9 @@
 		C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492F82530DBFD001E243C /* ImageDataSource.swift */; };
 		C58492FF2530E698001E243C /* ImageRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492FE2530E698001E243C /* ImageRemoteDataSource.swift */; };
 		C58493072530FB8F001E243C /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58493062530FB8F001E243C /* ImageRepository.swift */; };
+		C584931325310491001E243C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584931225310491001E243C /* String+Extension.swift */; };
+		C584931B25310506001E243C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C584931A25310506001E243C /* Localizable.strings */; };
+		C584932725310767001E243C /* MockImagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584932625310767001E243C /* MockImagesDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		C58492F82530DBFD001E243C /* ImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataSource.swift; sourceTree = "<group>"; };
 		C58492FE2530E698001E243C /* ImageRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteDataSource.swift; sourceTree = "<group>"; };
 		C58493062530FB8F001E243C /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		C584931225310491001E243C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C584931A25310506001E243C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C584932625310767001E243C /* MockImagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImagesDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +198,10 @@
 		C521CCC2252FFCA0007386B0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C584931125310470001E243C /* Extension */,
 				C521CCC3252FFCBE007386B0 /* UseCase.swift */,
 				C521CCC5252FFCEC007386B0 /* Constants.swift */,
+				C584931A25310506001E243C /* Localizable.strings */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -209,9 +217,26 @@
 		C58492FD2530E679001E243C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C584931F25310694001E243C /* Mock */,
 				C58492FE2530E698001E243C /* ImageRemoteDataSource.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		C584931125310470001E243C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C584931225310491001E243C /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C584931F25310694001E243C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C584932625310767001E243C /* MockImagesDataSource.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		C5CDE02F2530849200C085DF /* Data */ = {
@@ -361,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C521CC96252FF929007386B0 /* LaunchScreen.storyboard in Resources */,
+				C584931B25310506001E243C /* Localizable.strings in Resources */,
 				C521CC93252FF929007386B0 /* Assets.xcassets in Resources */,
 				C521CC8E252FF929007386B0 /* Home.storyboard in Resources */,
 			);
@@ -395,6 +421,7 @@
 				C521CCBB252FFB9F007386B0 /* HomeViewModel.swift in Sources */,
 				C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */,
 				C58493072530FB8F001E243C /* ImageRepository.swift in Sources */,
+				C584931325310491001E243C /* String+Extension.swift in Sources */,
 				C521CCC4252FFCBE007386B0 /* UseCase.swift in Sources */,
 				C521CCC1252FFC8E007386B0 /* GetImages.swift in Sources */,
 				C58492E62530C4C2001E243C /* ImgurResponse.swift in Sources */,
@@ -408,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58492FF2530E698001E243C /* ImageRemoteDataSource.swift in Sources */,
+				C584932725310767001E243C /* MockImagesDataSource.swift in Sources */,
 				C521CCCB25300890007386B0 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

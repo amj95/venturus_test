@@ -7,16 +7,34 @@
 
 import Foundation
 /*
- Fetches the list of images.
+ Fetches the list of images
  */
 class GetImages: UseCase {
     
-    init() {
-        
+    private var mImagesRepository: ImagesDataSource
+    
+    init(imagesRepository: ImagesDataSource){
+        mImagesRepository = imagesRepository
     }
     
     func executeUseCase(requestValues: RequestValuesProtocol, onComplete: @escaping (ResponseValueProtocol) -> Void, onError: @escaping (Constants.ComunicationError) -> Void) {
-        
+        mImagesRepository.getImages(onComplete: {(ImagesData) in
+            let response: ReponseValues = ReponseValues(responseData: ImagesData)
+            onComplete(response)
+        }, onError: {(Error) in
+            onError(Error)
+        })
     }
     
+    class RequestValues: RequestValuesProtocol{
+        init(){}
+    }
+    
+    class ReponseValues: ResponseValueProtocol{
+        var mList: [ImageData]
+        
+        init(responseData: [ImageData]){
+            mList = responseData
+        }
+    }
 }

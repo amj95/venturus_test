@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var collectionView: UICollectionView!
     var refresher:UIRefreshControl!
-    var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages())
+    var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: ImagesRemoteDataSource.getInstance())))
     private var subscriptions = Set<AnyCancellable>()
     
     override func viewDidLoad() {
