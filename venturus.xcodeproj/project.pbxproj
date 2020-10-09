@@ -14,7 +14,6 @@
 		C521CC91252FF929007386B0 /* venturus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C521CC8F252FF929007386B0 /* venturus.xcdatamodeld */; };
 		C521CC93252FF929007386B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C521CC92252FF929007386B0 /* Assets.xcassets */; };
 		C521CC96252FF929007386B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C521CC94252FF929007386B0 /* LaunchScreen.storyboard */; };
-		C521CCA1252FF92A007386B0 /* venturusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCA0252FF92A007386B0 /* venturusTests.swift */; };
 		C521CCAC252FF92A007386B0 /* venturusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCAB252FF92A007386B0 /* venturusUITests.swift */; };
 		C521CCBB252FFB9F007386B0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCBA252FFB9F007386B0 /* HomeViewModel.swift */; };
 		C521CCC1252FFC8E007386B0 /* GetImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCC0252FFC8E007386B0 /* GetImages.swift */; };
@@ -52,7 +51,6 @@
 		C521CC95252FF929007386B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C521CC97252FF929007386B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C521CC9C252FF92A007386B0 /* venturusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = venturusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C521CCA0252FF92A007386B0 /* venturusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = venturusTests.swift; sourceTree = "<group>"; };
 		C521CCA2252FF92A007386B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C521CCA7252FF92A007386B0 /* venturusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = venturusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C521CCAB252FF92A007386B0 /* venturusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = venturusUITests.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				C521CCC925300882007386B0 /* HomeView */,
-				C521CCA0252FF92A007386B0 /* venturusTests.swift */,
 				C521CCA2252FF92A007386B0 /* Info.plist */,
 			);
 			path = venturusTests;
@@ -343,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C521CCA1252FF92A007386B0 /* venturusTests.swift in Sources */,
 				C521CCCB25300890007386B0 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

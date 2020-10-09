@@ -17,7 +17,7 @@ class HomeView: XCTestCase {
         viewModel = HomeViewModel(getImages: GetImages())
         let expectation = self.expectation(description: "waiting request")
         if let viewModel = viewModel {
-            let subscriber = viewModel
+            _ = viewModel
                 .$isLoading
                 .sink(receiveValue: {
                     guard $0 == true else { return }

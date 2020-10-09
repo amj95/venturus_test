@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionView: UICollectionView!
     var refresher:UIRefreshControl!
     var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages())
-    private var isLoadingSubscriber: AnyCancellable?
+    private var subscriptions = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +35,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func setupProcessChain() {
-        isLoadingSubscriber = mHomeViewModel
+        mHomeViewModel
             .$isLoading
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: {
-                if ($0) {
-                    self.showRefresher()
-                } else {
-                    self.hideRefresher()
-                }
-            })
+                $0 ? self.showRefresher() : self.hideRefresher()
+            }).store(in: &subscriptions)
     }
     
     func showRefresher() {
@@ -54,7 +50,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func hideRefresher() {
         self.refresher.endRefreshing()
     }
-
+    
 }
 
 extension HomeViewController {
