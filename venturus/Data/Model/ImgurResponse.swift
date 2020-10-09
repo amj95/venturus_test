@@ -16,75 +16,19 @@ struct ImgurResponse: Codable {
 // MARK: - Datum
 struct ImageData: Codable {
     let id, title: String
-    let datumDescription: String?
-    let datetime: Int
-    let cover: String?
-    let coverWidth, coverHeight: Int?
-    let accountURL: String
-    let accountID: Int
-    let privacy: Privacy?
-    let layout: Layout?
+    let ups, downs: Int
+    let commentCount: Int
     let views: Int
-    let link: String
-    let ups, downs, points, score: Int
-    let isAlbum: Bool
-    let vote: JSONNull?
-    let favorite, nsfw: Bool
-    let section: Section
-    let commentCount, favoriteCount: Int
-    let topic: Topic
-    let topicID: Int
-    let imagesCount: Int?
-    let inGallery, isAd: Bool
-    let tags: [Tag]
-    let adType: Int
-    let adURL: String
-    let inMostViral: Bool
-    let includeAlbumAds: Bool?
     let images: [Image]?
-    let adConfig: AdConfig
     let type: TypeEnum?
-    let animated: Bool?
-    let width, height, size, bandwidth: Int?
-    let hasSound: Bool?
-    let edited: Int?
-    let mp4: String?
-    let gifv: String?
-    let hls: String?
-    let mp4Size: Int?
-    let looping: Bool?
-    let processing: Processing?
+    
 
     enum CodingKeys: String, CodingKey {
         case id, title
-        case datumDescription = "description"
-        case datetime, cover
-        case coverWidth = "cover_width"
-        case coverHeight = "cover_height"
-        case accountURL = "account_url"
-        case accountID = "account_id"
-        case privacy, layout, views, link, ups, downs, points, score
-        case isAlbum = "is_album"
-        case vote, favorite, nsfw, section
+        case views, ups, downs
         case commentCount = "comment_count"
-        case favoriteCount = "favorite_count"
-        case topic
-        case topicID = "topic_id"
-        case imagesCount = "images_count"
-        case inGallery = "in_gallery"
-        case isAd = "is_ad"
-        case tags
-        case adType = "ad_type"
-        case adURL = "ad_url"
-        case inMostViral = "in_most_viral"
-        case includeAlbumAds = "include_album_ads"
         case images
-        case adConfig = "ad_config"
-        case type, animated, width, height, size, bandwidth
-        case hasSound = "has_sound"
-        case edited, mp4, gifv, hls
-        case mp4Size = "mp4_size"
-        case looping, processing
+        case type
     }
 }
 
@@ -112,51 +56,13 @@ enum UnsafeFlag: String, Codable {
 // MARK: - Image
 struct Image: Codable {
     let id: String
-    let title: JSONNull?
-    let imageDescription: String?
-    let datetime: Int
     let type: TypeEnum
-    let animated: Bool
-    let width, height, size, views: Int
-    let bandwidth: Int
-    let vote: JSONNull?
-    let favorite: Bool
-    let nsfw, section, accountURL, accountID: JSONNull?
-    let isAd, inMostViral, hasSound: Bool
-    let tags: [JSONAny]
-    let adType: Int
-    let adURL, edited: String
-    let inGallery: Bool
     let link: String
-    let mp4Size: Int?
-    let mp4: String?
-    let gifv: String?
-    let hls: String?
-    let processing: Processing?
-    let commentCount, favoriteCount, ups, downs: JSONNull?
-    let points, score: JSONNull?
-    let looping: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case id, title
-        case imageDescription = "description"
-        case datetime, type, animated, width, height, size, views, bandwidth, vote, favorite, nsfw, section
-        case accountURL = "account_url"
-        case accountID = "account_id"
-        case isAd = "is_ad"
-        case inMostViral = "in_most_viral"
-        case hasSound = "has_sound"
-        case tags
-        case adType = "ad_type"
-        case adURL = "ad_url"
-        case edited
-        case inGallery = "in_gallery"
+        case id
+        case type
         case link
-        case mp4Size = "mp4_size"
-        case mp4, gifv, hls, processing
-        case commentCount = "comment_count"
-        case favoriteCount = "favorite_count"
-        case ups, downs, points, score, looping
     }
 }
 
