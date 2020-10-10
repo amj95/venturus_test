@@ -10,22 +10,19 @@ import UIKit
 
 class ImageViewCell: UICollectionViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        setup()
+    @IBOutlet weak var ivCover: UIImageView!
+    @IBOutlet weak var lbUp: UILabel!
+    @IBOutlet weak var lbComment: UILabel!
+    @IBOutlet weak var lbView: UILabel!
+    
+    func prepare(up: String, comment: String, views: String) {
+        lbUp.text = up
+        lbComment.text = comment
+        lbView.text = views
+        ivCover.image = UIImage(named: "reload")
     }
     
-    func setup() {
-        let view = loadViewFromNib()
-        view.frame = bounds
-        addSubview(view)
-    }
-    
-    func loadViewFromNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "ImageCell", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        return view
+    func loadImage() {
+        print("show request")
     }
 }

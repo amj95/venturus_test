@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A434058C-B1E1-4270-A3A8-6BA468A799B6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "venturus/HomeView/HomeViewModel.swift"
@@ -104,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "736D159B-F3A4-4D17-8DB8-58D8BE38D217"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "venturus/HomeView/HomeViewModel.swift"
@@ -247,32 +247,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "32AE991F-E2C8-47AC-A42A-C0114A42B376"
-            shouldBeEnabled = "Yes"
+            uuid = "43191B72-661B-4A3E-8006-949AD033D44D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "venturus/HomeView/cell/ImageViewCell.swift"
+            filePath = "venturus/HomeView/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "awakeFromNib()"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6F1743FB-812A-42AD-AD4E-A8D942334BD6"
-            shouldBeEnabled = "Yes"
+            uuid = "53D569F1-2457-43E3-A41B-E9C0E6A47967"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "venturus/HomeView/cell/ImageViewCell.swift"
+            filePath = "venturus/HomeView/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "awakeFromNib()"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "willRotate(to:duration:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

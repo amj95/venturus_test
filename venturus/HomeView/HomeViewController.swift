@@ -8,13 +8,14 @@
 import UIKit
 import Combine
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var refresher:UIRefreshControl!
     var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: ImagesRemoteDataSource.getInstance())))
     private var subscriptions = Set<AnyCancellable>()
     private var dataArray: [ImageData] = []
+    var columns = CGFloat(1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.refresher.tintColor = UIColor.red
         self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
         self.collectionView!.addSubview(refresher)
+        let nib = UINib(nibName: "ImageCell",bundle: nil)
+        self.collectionView.register(nib, forCellWithReuseIdentifier: "cell")
         
         setupProcessChain()
         mHomeViewModel.loadData()
@@ -42,6 +45,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             .sink(receiveValue: {
                 $0 ? self.showRefresher() : self.hideRefresher()
             }).store(in: &subscriptions)
+        
+        mHomeViewModel
+            .$dataArray
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: {
+                self.dataArray = $0
+                self.collectionView.reloadData()
+            }).store(in: &subscriptions)
     }
     
     func showRefresher() {
@@ -52,18 +63,49 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.refresher.endRefreshing()
     }
     
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        columns = toInterfaceOrientation == .portrait ? CGFloat(1.0) : CGFloat(2.0)
+        self.collectionView.reloadData()
+    }
+    
 }
 
 extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        return dataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageViewCell
-//        cell.prepare(titulo: titleArray[indexPath.row], imagem: imageArray[indexPath.row]!)
+        let data = dataArray[indexPath.row]
+        cell.prepare(up: String(data.ups), comment: String(data.commentCount), views: String(data.views))
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let yourWidth = collectionView.bounds.width / columns
+        let yourHeight = CGFloat(310.0)
+
+        return CGSize(width: yourWidth, height: yourHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let showCell = cell as? ImageViewCell {
+            showCell.loadImage()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
 
