@@ -6,6 +6,7 @@ target 'venturus' do
   use_frameworks!
 
   # Pods for venturus
-	pod 'Kingfisher', '~> 4.0'
+	pod 'Kingfisher', '~> 5.0'
+	pod "GoneVisible"
 
 end

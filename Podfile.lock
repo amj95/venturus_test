@@ -1,16 +1,22 @@
 PODS:
-  - Kingfisher (4.10.1)
+  - GoneVisible (1.2.0)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
 
 DEPENDENCIES:
-  - Kingfisher (~> 4.0)
+  - GoneVisible
+  - Kingfisher (~> 5.0)
 
 SPEC REPOS:
   trunk:
+    - GoneVisible
     - Kingfisher
 
 SPEC CHECKSUMS:
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  GoneVisible: c552940cd9df7548427f6bffd000dcbcc6de187f
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
 
-PODFILE CHECKSUM: 4e91632f18a2f31732099cc981c93cadf37cf71f
+PODFILE CHECKSUM: 5ae7b9c7532bebe96ce4e636165dfc75957f057e
 
 COCOAPODS: 1.9.3
