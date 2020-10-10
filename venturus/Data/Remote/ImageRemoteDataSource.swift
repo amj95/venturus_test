@@ -46,7 +46,7 @@ class ImagesRemoteDataSource: ImagesDataSource {
                     let strData: Data? = str!.data(using: .utf8)
                     do {
                         let entity = try JSONDecoder().decode(ImgurResponse.self, from: strData!)
-                        onComplete(entity.data)
+                        onComplete(entity.data.filter({$0.images != nil }))
                     } catch {
                         onError(.invalidJSON)
                     }

@@ -21,6 +21,7 @@ struct ImageData: Codable {
     let views: Int
     let images: [Image]?
     let type: TypeEnum?
+    let link: String
     
 
     enum CodingKeys: String, CodingKey {
@@ -29,6 +30,7 @@ struct ImageData: Codable {
         case commentCount = "comment_count"
         case images
         case type
+        case link
     }
 }
 

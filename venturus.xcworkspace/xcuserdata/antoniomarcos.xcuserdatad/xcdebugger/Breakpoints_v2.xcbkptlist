@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9FBF1D32-81F9-4388-8187-E6D8A8FE2C64"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACDCC538-D4A4-407B-B33B-E0CEFCF2E476"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "venturus/HomeView/cell/ImageViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "loadImage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45E2EB96-B847-4DFF-9D3B-D9944E3BBFDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "venturus/Data/Remote/ImageRemoteDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getImages(onComplete:onError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "45E2EB96-B847-4DFF-9D3B-D9944E3BBFDB - 9788e3336777167a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in venturus.ImagesRemoteDataSource.getImages(onComplete: (Swift.Array&lt;venturus.ImageData&gt;) -&gt; (), onError: (venturus.Constants.ComunicationError) -&gt; ()) -&gt; ()"
+                  moduleName = "venturus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antoniomarcos/Desktop/venturus/venturus/Data/Remote/ImageRemoteDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "2378">
+               </Location>
+               <Location
+                  uuid = "45E2EB96-B847-4DFF-9D3B-D9944E3BBFDB - 606139d12c728d26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (venturus.ImageData) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in venturus.ImagesRemoteDataSource.getImages(onComplete: (Swift.Array&lt;venturus.ImageData&gt;) -&gt; (), onError: (venturus.Constants.ComunicationError) -&gt; ()) -&gt; ()"
+                  moduleName = "venturus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antoniomarcos/Desktop/venturus/venturus/Data/Remote/ImageRemoteDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "81">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var refresher:UIRefreshControl!
@@ -79,7 +79,7 @@ extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageViewCell
         let data = dataArray[indexPath.row]
-        cell.prepare(up: String(data.ups), comment: String(data.commentCount), views: String(data.views))
+        cell.prepare(up: String(data.ups), comment: String(data.commentCount), views: String(data.views), imageUrl: data.images?.first?.link)
         return cell
     }
     

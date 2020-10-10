@@ -30,6 +30,8 @@
 		C584931B25310506001E243C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C584931A25310506001E243C /* Localizable.strings */; };
 		C584932725310767001E243C /* MockImagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584932625310767001E243C /* MockImagesDataSource.swift */; };
 		C5849351253119A2001E243C /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5849350253119A2001E243C /* ImageCell.xib */; };
+		C58493562531EF52001E243C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58493552531EF52001E243C /* BaseViewController.swift */; };
+		CA2FFA12C77BAC4869F95F27 /* Pods_venturus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C479688652F595C9CBEB84 /* Pods_venturus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B911356528B78545A58271E1 /* Pods-venturus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-venturus.debug.xcconfig"; path = "Target Support Files/Pods-venturus/Pods-venturus.debug.xcconfig"; sourceTree = "<group>"; };
 		C521CC83252FF929007386B0 /* venturus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = venturus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C521CC86252FF929007386B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C521CC88252FF929007386B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +82,9 @@
 		C584931A25310506001E243C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C584932625310767001E243C /* MockImagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImagesDataSource.swift; sourceTree = "<group>"; };
 		C5849350253119A2001E243C /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		C58493552531EF52001E243C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E48BD54E5E4B16BBFF421D9F /* Pods-venturus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-venturus.release.xcconfig"; path = "Target Support Files/Pods-venturus/Pods-venturus.release.xcconfig"; sourceTree = "<group>"; };
+		F4C479688652F595C9CBEB84 /* Pods_venturus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_venturus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2FFA12C77BAC4869F95F27 /* Pods_venturus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +113,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		343698A158C9C0A4D7483FE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4C479688652F595C9CBEB84 /* Pods_venturus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E03DF4E96A061FEC6F8D21B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B911356528B78545A58271E1 /* Pods-venturus.debug.xcconfig */,
+				E48BD54E5E4B16BBFF421D9F /* Pods-venturus.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C521CC7A252FF929007386B0 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +138,8 @@
 				C521CC9F252FF92A007386B0 /* venturusTests */,
 				C521CCAA252FF92A007386B0 /* venturusUITests */,
 				C521CC84252FF929007386B0 /* Products */,
+				4E03DF4E96A061FEC6F8D21B /* Pods */,
+				343698A158C9C0A4D7483FE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +232,7 @@
 				C521CCC3252FFCBE007386B0 /* UseCase.swift */,
 				C521CCC5252FFCEC007386B0 /* Constants.swift */,
 				C584931A25310506001E243C /* Localizable.strings */,
+				C58493552531EF52001E243C /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -292,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C521CCB0252FF92A007386B0 /* Build configuration list for PBXNativeTarget "venturus" */;
 			buildPhases = (
+				78E6C9051F7E030F48E82FDD /* [CP] Check Pods Manifest.lock */,
 				C521CC7F252FF929007386B0 /* Sources */,
 				C521CC80252FF929007386B0 /* Frameworks */,
 				C521CC81252FF929007386B0 /* Resources */,
+				E44BA8EB7B93A73DFBDE8D48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,6 +442,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78E6C9051F7E030F48E82FDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-venturus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E44BA8EB7B93A73DFBDE8D48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-venturus/Pods-venturus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-venturus/Pods-venturus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-venturus/Pods-venturus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C521CC7F252FF929007386B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -422,6 +494,7 @@
 				C521CC91252FF929007386B0 /* venturus.xcdatamodeld in Sources */,
 				C521CC87252FF929007386B0 /* AppDelegate.swift in Sources */,
 				C58492F42530DB79001E243C /* ImageRemoteDataSource.swift in Sources */,
+				C58493562531EF52001E243C /* BaseViewController.swift in Sources */,
 				C521CCBB252FFB9F007386B0 /* HomeViewModel.swift in Sources */,
 				C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */,
 				C58493072530FB8F001E243C /* ImageRepository.swift in Sources */,
@@ -605,6 +678,7 @@
 		};
 		C521CCB1252FF92A007386B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B911356528B78545A58271E1 /* Pods-venturus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -623,6 +697,7 @@
 		};
 		C521CCB2252FF92A007386B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48BD54E5E4B16BBFF421D9F /* Pods-venturus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
