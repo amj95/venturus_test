@@ -18,7 +18,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: ImagesRemoteDataSource.getInstance())))
     private var subscriptions = Set<AnyCancellable>()
     private var dataArray: [ImageData] = []
-    var refresher:UIRefreshControl!
+    var refresher: UIRefreshControl!
     var columns = CGFloat(1.0)
     
     override func viewDidLoad() {
@@ -26,17 +26,30 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        self.refresher = UIRefreshControl()
-        self.collectionView!.alwaysBounceVertical = true
-        self.refresher.tintColor = UIColor.red
-        self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
-        self.collectionView!.addSubview(refresher)
+        setupRefresher()
         let nib = UINib(nibName: "ImageCell",bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "cell")
         
         viewError.isHidden = true
         setupProcessChain()
         mHomeViewModel.loadData()
+    }
+    
+    func setupRefresher() {
+        self.refresher = UIRefreshControl()
+        let refreshImage = UIImageView()
+        refreshImage.image = UIImage(named: "sync")
+        refreshImage.animate()
+        refresher.backgroundColor = UIColor.clear
+        refresher.tintColor = UIColor.clear
+        refresher.addSubview(refreshImage)
+        refreshImage.frame = refresher.bounds.offsetBy(dx: self.view.frame.size.width / 2 - 20, dy: 10)
+        refreshImage.frame.size.width = 40 // Whatever width you want
+        refreshImage.frame.size.height = 40 // Whatever height you want
+        refreshImage.contentMode = .scaleAspectFit
+        self.collectionView!.alwaysBounceVertical = true
+        self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        self.collectionView!.addSubview(refresher)
     }
     
     @objc func loadData() {
@@ -91,15 +104,16 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     
 }
 
+// MARK: Collection View Delegate Methods
 extension HomeViewController {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return dataArray.count
+        return mHomeViewModel.dataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageViewCell
-        let data = dataArray[indexPath.row]
+        let data = mHomeViewModel.dataArray[indexPath.row]
         cell.prepare(up: String(data.ups), comment: String(data.commentCount), views: String(data.views), imageUrl: data.images?.first?.link)
         return cell
     }
