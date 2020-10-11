@@ -27,9 +27,10 @@ class ImagesRemoteDataSource: ImagesDataSource {
         return INSTANCE!
     }
     
-    func getImages(onComplete: @escaping ([ImageData]) -> Void, onError: @escaping (Constants.ComunicationError) -> Void) {
+    func getImages(requestValue: RequestValuesProtocol, onComplete: @escaping ([ImageData]) -> Void, onError: @escaping (Constants.ComunicationError) -> Void) {
+        let request = requestValue as! GetImages.RequestValues
         
-        guard let url = URL(string: basePath) else {return}
+        guard let url = URL(string: basePath + "/\(request.page)") else {return}
         
         let dataTask = session.dataTask(with: url) { (data: Data?, response:URLResponse?, error:Error?) in
             

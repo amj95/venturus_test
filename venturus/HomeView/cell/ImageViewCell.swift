@@ -26,10 +26,15 @@ class ImageViewCell: UICollectionViewCell {
         if let image = imageUrl {
             self.imageUrl = image
         }
-        ivReload.image = UIImage(named: "sync")
+        
+        let tapRec = UITapGestureRecognizer()
+        tapRec.addTarget(self, action: #selector(loadImage))
+        ivReload.addGestureRecognizer(tapRec)
+        ivReload.isUserInteractionEnabled = true;
     }
     
-    func loadImage() {
+    @objc func loadImage() {
+        ivReload.image = UIImage(named: "sync")
         ivReload.animate()
         ivReload.visible()
         let url = URL(string: imageUrl)

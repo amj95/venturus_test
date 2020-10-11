@@ -14,7 +14,7 @@ class ImagesRepository: ImagesDataSource {
     private static var INSTANCE: ImagesRepository? = nil
     private var mRemoteDataSource: ImagesDataSource
     //This variable store all previous data for instant responses
-    private var mCache = [String : ImageData]()
+    private var mCache = [Int : [ImageData]]()
     
     private init(remoteDataSource: ImagesDataSource){
         mRemoteDataSource = remoteDataSource
@@ -27,18 +27,17 @@ class ImagesRepository: ImagesDataSource {
         return INSTANCE!
     }
     
-    func getImages(onComplete: @escaping ([ImageData]) -> Void, onError: @escaping (Constants.ComunicationError) -> Void) {
-        mRemoteDataSource.getImages(onComplete: {(ImageData) in
+    func getImages(requestValue: RequestValuesProtocol, onComplete: @escaping ([ImageData]) -> Void, onError: @escaping (Constants.ComunicationError) -> Void) {
+        mRemoteDataSource.getImages(requestValue: requestValue ,onComplete: {(ImageData) in
             onComplete(ImageData)
-            self.refreshCache(images: ImageData)
+            self.refreshCache(requestValue: requestValue, images: ImageData)
         }, onError: {(Error) in
             onError(Error)
         })
     }
     
-    func refreshCache(images: [ImageData]){
-        for image in images {
-            mCache[image.id] = image
-        }
+    func refreshCache(requestValue: RequestValuesProtocol, images: [ImageData]) {
+        let request = requestValue as! GetImages.RequestValues
+        mCache[request.page] = images
     }
 }

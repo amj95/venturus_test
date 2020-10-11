@@ -12,13 +12,14 @@ import GoneVisible
 class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var refresher:UIRefreshControl!
+    @IBOutlet weak var viewError: UIView!
+    @IBOutlet weak var lbError: UILabel!
+    
     var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: ImagesRemoteDataSource.getInstance())))
     private var subscriptions = Set<AnyCancellable>()
     private var dataArray: [ImageData] = []
+    var refresher:UIRefreshControl!
     var columns = CGFloat(1.0)
-    @IBOutlet weak var viewError: UIView!
-    @IBOutlet weak var lbError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +114,9 @@ extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let showCell = cell as? ImageViewCell {
             showCell.loadImage()
+        }
+        if (indexPath.row == dataArray.count - 1 ) {
+            mHomeViewModel.loadData()
         }
     }
     

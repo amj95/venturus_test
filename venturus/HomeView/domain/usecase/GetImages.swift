@@ -18,7 +18,7 @@ class GetImages: UseCase {
     }
     
     func executeUseCase(requestValues: RequestValuesProtocol, onComplete: @escaping (ResponseValueProtocol) -> Void, onError: @escaping (Constants.ComunicationError) -> Void) {
-        mImagesRepository.getImages(onComplete: {(ImagesData) in
+        mImagesRepository.getImages(requestValue: requestValues, onComplete: {(ImagesData) in
             let response: ReponseValues = ReponseValues(responseData: ImagesData)
             onComplete(response)
         }, onError: {(Error) in
@@ -26,14 +26,18 @@ class GetImages: UseCase {
         })
     }
     
-    class RequestValues: RequestValuesProtocol{
-        init(){}
+    class RequestValues: RequestValuesProtocol {
+        var page: Int
+        
+        init(page: Int) {
+            self.page = page
+        }
     }
-    
-    class ReponseValues: ResponseValueProtocol{
+     
+    class ReponseValues: ResponseValueProtocol {
         var mList: [ImageData]
         
-        init(responseData: [ImageData]){
+        init(responseData: [ImageData]) {
             mList = responseData
         }
     }
