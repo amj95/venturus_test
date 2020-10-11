@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import GoneVisible
 
 class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -16,6 +17,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     private var subscriptions = Set<AnyCancellable>()
     private var dataArray: [ImageData] = []
     var columns = CGFloat(1.0)
+    @IBOutlet weak var viewError: UIView!
+    @IBOutlet weak var lbError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         let nib = UINib(nibName: "ImageCell",bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "cell")
         
+        viewError.isHidden = true
         setupProcessChain()
         mHomeViewModel.loadData()
     }
@@ -53,6 +57,13 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
                 self.dataArray = $0
                 self.collectionView.reloadData()
             }).store(in: &subscriptions)
+        
+        mHomeViewModel
+            .$result
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: {
+                $0.count > 0 ? self.showError(errorDescription: $0) : self.hideError()
+            }).store(in: &subscriptions)
     }
     
     func showRefresher() {
@@ -66,6 +77,15 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         columns = toInterfaceOrientation == .portrait ? CGFloat(1.0) : CGFloat(2.0)
         self.collectionView.reloadData()
+    }
+    
+    func showError(errorDescription: String) {
+        viewError.isHidden = false
+        lbError.text = errorDescription
+    }
+    
+    func hideError() {
+        viewError.isHidden = true
     }
     
 }
@@ -86,7 +106,7 @@ extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let yourWidth = collectionView.bounds.width / columns
         let yourHeight = CGFloat(310.0)
-
+        
         return CGSize(width: yourWidth, height: yourHeight)
     }
     
@@ -99,11 +119,11 @@ extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.zero
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

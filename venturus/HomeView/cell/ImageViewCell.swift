@@ -26,7 +26,7 @@ class ImageViewCell: UICollectionViewCell {
         if let image = imageUrl {
             self.imageUrl = image
         }
-        ivCover.image = UIImage(named: "reload")
+        ivReload.image = UIImage(named: "sync")
     }
     
     func loadImage() {
@@ -41,8 +41,7 @@ class ImageViewCell: UICollectionViewCell {
                 .transition(.fade(1)),
                 .cacheOriginalImage
             ])
-        {
-            result in
+        { result in
             switch result {
             case .success(let value):
                 self.ivReload.gone()
@@ -50,8 +49,13 @@ class ImageViewCell: UICollectionViewCell {
             case .failure(let error):
                 self.ivReload.visible()
                 self.ivReload.removeAnimation()
+                self.setRetry()
             }
         }
+    }
+    
+    func setRetry() {
+        ivReload.image = UIImage(named: "retry")
     }
     
 }

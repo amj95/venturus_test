@@ -36,6 +36,7 @@ class HomeViewModel {
             self.isLoading = false
             DispatchQueue.main.async {
                 self.result = "<Failed Load>".localized
+                self.dataArray = []
             }
         })
     }

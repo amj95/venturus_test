@@ -58,28 +58,62 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-ih-sll">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sync" translatesAutoresizingMaskIntoConstraints="NO" id="waB-j2-mgc">
+                                        <rect key="frame" x="80" y="80" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Nnt-aT-gHv"/>
+                                            <constraint firstAttribute="height" constant="80" id="urh-OS-I6T"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEs-xC-owL">
+                                        <rect key="frame" x="99" y="176" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="font_primary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="waB-j2-mgc" firstAttribute="centerX" secondItem="yn9-ih-sll" secondAttribute="centerX" id="GkO-d8-oyX"/>
+                                    <constraint firstItem="rEs-xC-owL" firstAttribute="top" secondItem="waB-j2-mgc" secondAttribute="bottom" constant="16" id="KlP-wJ-DwW"/>
+                                    <constraint firstItem="waB-j2-mgc" firstAttribute="centerY" secondItem="yn9-ih-sll" secondAttribute="centerY" id="S7p-fi-8iD"/>
+                                    <constraint firstAttribute="width" constant="240" id="mem-vr-GBa"/>
+                                    <constraint firstItem="rEs-xC-owL" firstAttribute="centerX" secondItem="yn9-ih-sll" secondAttribute="centerX" id="n1P-6Y-Lfy"/>
+                                    <constraint firstAttribute="height" constant="240" id="x6y-EN-OJU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cbs-QX-YYg"/>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="cbs-QX-YYg" firstAttribute="bottom" secondItem="0Pk-NV-pcQ" secondAttribute="bottom" id="5Y4-6U-A5t"/>
                             <constraint firstItem="0Pk-NV-pcQ" firstAttribute="leading" secondItem="cbs-QX-YYg" secondAttribute="leading" id="8bd-oU-Qrp"/>
+                            <constraint firstItem="yn9-ih-sll" firstAttribute="centerX" secondItem="P1M-2h-AYT" secondAttribute="centerX" id="Muw-dc-jB0"/>
                             <constraint firstItem="cbs-QX-YYg" firstAttribute="trailing" secondItem="0Pk-NV-pcQ" secondAttribute="trailing" id="N7L-DO-cHc"/>
                             <constraint firstItem="0Pk-NV-pcQ" firstAttribute="top" secondItem="cbs-QX-YYg" secondAttribute="top" id="i6e-Zs-Q5U"/>
+                            <constraint firstItem="yn9-ih-sll" firstAttribute="centerY" secondItem="P1M-2h-AYT" secondAttribute="centerY" id="ndr-iq-LTz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Top Weekly" id="jgM-4J-Scf"/>
                     <connections>
                         <outlet property="collectionView" destination="0Pk-NV-pcQ" id="TR1-7R-mt4"/>
+                        <outlet property="lbError" destination="rEs-xC-owL" id="bW2-an-UWJ"/>
+                        <outlet property="viewError" destination="yn9-ih-sll" id="nvU-y1-gpP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plJ-qZ-SEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="-386"/>
+            <point key="canvasLocation" x="192.75362318840581" y="-386.38392857142856"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemGray3Color"/>
     <resources>
+        <image name="sync" width="36.458999633789062" height="32.375"/>
+        <namedColor name="font_primary">
+            <color red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary">
             <color red="0.17254901960784313" green="0.1803921568627451" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
