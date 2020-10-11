@@ -14,7 +14,8 @@ class ImageRemoteDataSource: XCTestCase {
     func test_successfull_request() {
         var results: [ImageData] = []
         let expectation = self.expectation(description: "waiting request")
-        ImagesRemoteDataSource.getInstance().getImages(onComplete: {(ImageData) in
+        let requestValue = GetImages.RequestValues(page: 1)
+        ImagesRemoteDataSource.getInstance().getImages(requestValue: requestValue, onComplete: {(ImageData) in
             results = ImageData
             expectation.fulfill()
         }, onError: {(Error) in

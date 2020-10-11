@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		C584932725310767001E243C /* MockImagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584932625310767001E243C /* MockImagesDataSource.swift */; };
 		C5849351253119A2001E243C /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5849350253119A2001E243C /* ImageCell.xib */; };
 		C58493562531EF52001E243C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58493552531EF52001E243C /* BaseViewController.swift */; };
+		C58E44652533532200FDB715 /* success_request.json in Resources */ = {isa = PBXBuildFile; fileRef = C58E44642533532200FDB715 /* success_request.json */; };
 		CA2FFA12C77BAC4869F95F27 /* Pods_venturus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C479688652F595C9CBEB84 /* Pods_venturus.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		C584932625310767001E243C /* MockImagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImagesDataSource.swift; sourceTree = "<group>"; };
 		C5849350253119A2001E243C /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		C58493552531EF52001E243C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C58E44642533532200FDB715 /* success_request.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_request.json; sourceTree = "<group>"; };
 		E48BD54E5E4B16BBFF421D9F /* Pods-venturus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-venturus.release.xcconfig"; path = "Target Support Files/Pods-venturus/Pods-venturus.release.xcconfig"; sourceTree = "<group>"; };
 		F4C479688652F595C9CBEB84 /* Pods_venturus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_venturus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,7 +129,6 @@
 				B911356528B78545A58271E1 /* Pods-venturus.debug.xcconfig */,
 				E48BD54E5E4B16BBFF421D9F /* Pods-venturus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +249,7 @@
 		C58492FD2530E679001E243C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C58E44642533532200FDB715 /* success_request.json */,
 				C584931F25310694001E243C /* Mock */,
 				C58492FE2530E698001E243C /* ImageRemoteDataSource.swift */,
 			);
@@ -430,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58E44652533532200FDB715 /* success_request.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

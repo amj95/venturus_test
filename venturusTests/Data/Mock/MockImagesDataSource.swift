@@ -14,28 +14,35 @@ class MockImagesRemoteDataSource: ImagesDataSource {
     var shouldReturnError = false
     var getDataWasCalled = false
     
-    private init() {
+    private init(shouldReturnError: Bool) {
+        self.shouldReturnError = shouldReturnError
     }
     
-    static func getInstance() -> MockImagesRemoteDataSource {
-        
-        if (INSTANCE == nil) {
-            INSTANCE = MockImagesRemoteDataSource()
+    static func getInstance(shouldReturnError: Bool) -> MockImagesRemoteDataSource {
+        if(INSTANCE == nil){
+            INSTANCE = MockImagesRemoteDataSource(shouldReturnError: shouldReturnError)
         }
+        INSTANCE?.shouldReturnError = shouldReturnError
         
         return INSTANCE!
     }
     
-    func getImages(onComplete: @escaping ([ImageData]) -> Void, onError: @escaping (Constants.ComunicationError) -> Void)  {
+    
+    func getImages(requestValue: RequestValuesProtocol ,onComplete: @escaping ([ImageData]) -> Void, onError: @escaping (Constants.ComunicationError) -> Void)  {
         getDataWasCalled = true
         if shouldReturnError {
             onError(.invalidJSON)
         } else {
-//            let mockResponseData = [
-//                SCNoticia(id: 1, title: "noticia 1", body: "body noiticia", image: "http://teste.com", views: 1, created_at: "11/11/2020")
-//                ,SCNoticia(id: 2, title: "noticia 2", body: "body noiticia2", image: "http://teste2.com", views: 2, created_at: "22/11/2020")]
-            let mockResponseData: [ImageData] = []
-            onComplete(mockResponseData)
+            if let fileLocation = Bundle.main.url(forResource: "success_request", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: fileLocation)
+                    let jsonDecoder = JSONDecoder()
+                    let dataFromJson = try jsonDecoder.decode(ImgurResponse.self, from: data)
+                    onComplete(dataFromJson.data)
+                } catch {
+                    onError(.invalidJSON)
+                }
+            }
         }
     }
 }
