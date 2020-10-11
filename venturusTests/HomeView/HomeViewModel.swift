@@ -13,7 +13,7 @@ class HomeView: XCTestCase {
 //    let mockDataSource = MockImagesRemoteDataSource.getInstance(shouldReturnError: false)
     var viewModel: HomeViewModel?
     
-    func test_success_request() {
+    func testSuccessRequest() {
         let mockDataSource = MockImagesRemoteDataSource.getInstance(shouldReturnError: false)
         mockDataSource.getDataWasCalled = false
         viewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: mockDataSource)))

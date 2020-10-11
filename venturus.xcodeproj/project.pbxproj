@@ -20,7 +20,7 @@
 		C521CCC4252FFCBE007386B0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCC3252FFCBE007386B0 /* UseCase.swift */; };
 		C521CCC6252FFCEC007386B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCC5252FFCEC007386B0 /* Constants.swift */; };
 		C521CCC82530045A007386B0 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCC72530045A007386B0 /* ImageViewCell.swift */; };
-		C521CCCB25300890007386B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCCA25300890007386B0 /* HomeView.swift */; };
+		C521CCCB25300890007386B0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C521CCCA25300890007386B0 /* HomeViewModel.swift */; };
 		C58492E62530C4C2001E243C /* ImgurResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492E52530C4C2001E243C /* ImgurResponse.swift */; };
 		C58492F42530DB79001E243C /* ImageRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492F32530DB79001E243C /* ImageRemoteDataSource.swift */; };
 		C58492F92530DBFD001E243C /* ImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58492F82530DBFD001E243C /* ImageDataSource.swift */; };
@@ -32,6 +32,7 @@
 		C5849351253119A2001E243C /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5849350253119A2001E243C /* ImageCell.xib */; };
 		C58493562531EF52001E243C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58493552531EF52001E243C /* BaseViewController.swift */; };
 		C58E44652533532200FDB715 /* success_request.json in Resources */ = {isa = PBXBuildFile; fileRef = C58E44642533532200FDB715 /* success_request.json */; };
+		C5A76FBE2533AA3300C8F600 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A76FBD2533AA3300C8F600 /* HomeViewControllerTest.swift */; };
 		CA2FFA12C77BAC4869F95F27 /* Pods_venturus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C479688652F595C9CBEB84 /* Pods_venturus.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +74,7 @@
 		C521CCC3252FFCBE007386B0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		C521CCC5252FFCEC007386B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C521CCC72530045A007386B0 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
-		C521CCCA25300890007386B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C521CCCA25300890007386B0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C58492E52530C4C2001E243C /* ImgurResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurResponse.swift; sourceTree = "<group>"; };
 		C58492F32530DB79001E243C /* ImageRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteDataSource.swift; sourceTree = "<group>"; };
 		C58492F82530DBFD001E243C /* ImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataSource.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		C5849350253119A2001E243C /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		C58493552531EF52001E243C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C58E44642533532200FDB715 /* success_request.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_request.json; sourceTree = "<group>"; };
+		C5A76FBD2533AA3300C8F600 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		E48BD54E5E4B16BBFF421D9F /* Pods-venturus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-venturus.release.xcconfig"; path = "Target Support Files/Pods-venturus/Pods-venturus.release.xcconfig"; sourceTree = "<group>"; };
 		F4C479688652F595C9CBEB84 /* Pods_venturus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_venturus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -241,7 +243,8 @@
 		C521CCC925300882007386B0 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				C521CCCA25300890007386B0 /* HomeView.swift */,
+				C521CCCA25300890007386B0 /* HomeViewModel.swift */,
+				C5A76FBD2533AA3300C8F600 /* HomeViewControllerTest.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -516,7 +519,8 @@
 			files = (
 				C58492FF2530E698001E243C /* ImageRemoteDataSource.swift in Sources */,
 				C584932725310767001E243C /* MockImagesDataSource.swift in Sources */,
-				C521CCCB25300890007386B0 /* HomeView.swift in Sources */,
+				C521CCCB25300890007386B0 /* HomeViewModel.swift in Sources */,
+				C5A76FBE2533AA3300C8F600 /* HomeViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

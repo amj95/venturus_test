@@ -17,22 +17,28 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     
     var mHomeViewModel: HomeViewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: ImagesRemoteDataSource.getInstance())))
     private var subscriptions = Set<AnyCancellable>()
-    private var dataArray: [ImageData] = []
     var refresher: UIRefreshControl!
     var columns = CGFloat(1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        render()
+        setupProcessChain()
+        mHomeViewModel.loadData()
+    }
+    
+    func render() {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        setupRefresher()
+        self.navigationItem.title = "<Top Weekly>".localized
+        self.lbError.text = ""
         let nib = UINib(nibName: "ImageCell",bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "cell")
-        
         viewError.isHidden = true
-        setupProcessChain()
-        mHomeViewModel.loadData()
+        
+        setupRefresher()
     }
     
     func setupRefresher() {
@@ -44,8 +50,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         refresher.tintColor = UIColor.clear
         refresher.addSubview(refreshImage)
         refreshImage.frame = refresher.bounds.offsetBy(dx: self.view.frame.size.width / 2 - 20, dy: 10)
-        refreshImage.frame.size.width = 40 // Whatever width you want
-        refreshImage.frame.size.height = 40 // Whatever height you want
+        refreshImage.frame.size.width = 40
+        refreshImage.frame.size.height = 40
         refreshImage.contentMode = .scaleAspectFit
         self.collectionView!.alwaysBounceVertical = true
         self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
@@ -67,8 +73,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         mHomeViewModel
             .$dataArray
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: {
-                self.dataArray = $0
+            .sink(receiveValue: { data in
                 self.collectionView.reloadData()
             }).store(in: &subscriptions)
         
@@ -129,7 +134,7 @@ extension HomeViewController {
         if let showCell = cell as? ImageViewCell {
             showCell.loadImage()
         }
-        if (indexPath.row == dataArray.count - 1 ) {
+        if (indexPath.row == mHomeViewModel.dataArray.count - 1 ) {
             mHomeViewModel.loadData()
         }
     }

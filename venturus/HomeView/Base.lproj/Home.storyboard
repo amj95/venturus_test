@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-731" y="-386"/>
         </scene>
-        <!--Top Weekly-->
+        <!--Home View Controller-->
         <scene sceneID="7Go-IR-f9F">
             <objects>
-                <viewController id="Zai-vv-hVl" customClass="HomeViewController" customModule="venturus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" id="Zai-vv-hVl" customClass="HomeViewController" customModule="venturus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P1M-2h-AYT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +96,7 @@
                             <constraint firstItem="yn9-ih-sll" firstAttribute="centerY" secondItem="P1M-2h-AYT" secondAttribute="centerY" id="ndr-iq-LTz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Top Weekly" id="jgM-4J-Scf"/>
+                    <navigationItem key="navigationItem" id="jgM-4J-Scf"/>
                     <connections>
                         <outlet property="collectionView" destination="0Pk-NV-pcQ" id="TR1-7R-mt4"/>
                         <outlet property="lbError" destination="rEs-xC-owL" id="bW2-an-UWJ"/>
