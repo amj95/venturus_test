@@ -19,7 +19,7 @@ class HomeView: XCTestCase {
         viewModel = HomeViewModel(getImages: GetImages(imagesRepository: ImagesRepository.getInstance(remoteDataSource: mockDataSource)))
         let expectation = self.expectation(description: "waiting request")
         if let viewModel = viewModel {
-            let subscriber = viewModel
+            let _ = viewModel
                 .$dataArray
                 .sink(receiveValue: {
                     guard $0.count > 0 else { return }

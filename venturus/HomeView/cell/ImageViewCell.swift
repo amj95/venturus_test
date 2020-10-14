@@ -17,13 +17,16 @@ class ImageViewCell: UICollectionViewCell {
     @IBOutlet weak var lbComment: UILabel!
     @IBOutlet weak var lbView: UILabel!
     @IBOutlet weak var ivReload: UIImageView!
+    
+    var viewModel: ImageCellViewModel?
     var imageUrl: String = ""
     
-    func prepare(up: String, comment: String, views: String, imageUrl: String?) {
-        lbUp.text = up
-        lbComment.text = comment
-        lbView.text = views
-        if let image = imageUrl {
+    func prepare(viewModel: ImageCellViewModel) {
+        self.viewModel = viewModel
+        lbUp.text = viewModel.up
+        lbComment.text = viewModel.comment
+        lbView.text = viewModel.views
+        if let image = viewModel.imageUrl {
             self.imageUrl = image
         }
         
@@ -45,38 +48,22 @@ class ImageViewCell: UICollectionViewCell {
                 .scaleFactor(UIScreen.main.scale),
                 .transition(.fade(1)),
                 .cacheOriginalImage
-            ])
-        { result in
-            switch result {
-            case .success(let value):
-                self.ivReload.gone()
-                self.ivReload.removeAnimation()
-            case .failure(let error):
-                self.ivReload.visible()
-                self.ivReload.removeAnimation()
-                self.setRetry()
-            }
-        }
+            ], completionHandler:
+                { result in
+                    switch result {
+                    case .success( _):
+                        self.ivReload.gone()
+                        self.ivReload.removeAnimation()
+                    case .failure( _):
+                        self.ivReload.visible()
+                        self.ivReload.removeAnimation()
+                        self.setRetry()
+                    }
+                })
     }
     
     func setRetry() {
         ivReload.image = UIImage(named: "retry")
     }
     
-}
-
-extension UIView{
-    func animate() {
-        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotation.toValue = NSNumber(value: Double.pi * 2)
-        rotation.duration = 1.5
-        rotation.isCumulative = true
-        rotation.repeatCount = Float.greatestFiniteMagnitude
-        self.layer.add(rotation, forKey: "rotationAnimation")
-    }
-    
-    func removeAnimation() {
-       self.layer.removeAllAnimations()
-       self.layoutIfNeeded()
-   }
 }

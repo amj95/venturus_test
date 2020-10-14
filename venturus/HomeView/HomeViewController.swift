@@ -113,13 +113,14 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
 extension HomeViewController {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mHomeViewModel.dataArray.count
+        return mHomeViewModel.numberOfCells()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageViewCell
-        let data = mHomeViewModel.dataArray[indexPath.row]
-        cell.prepare(up: String(data.ups), comment: String(data.commentCount), views: String(data.views), imageUrl: data.images?.first?.link)
+        if let cellViewModel = mHomeViewModel.getCellViewModel(indexPath: indexPath.row) {
+            cell.prepare(viewModel: cellViewModel)
+        }
         return cell
     }
     

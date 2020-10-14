@@ -43,4 +43,16 @@ class HomeViewModel {
         })
     }
     
+    func getCellViewModel(indexPath: Int) -> ImageCellViewModel? {
+        if (dataArray.indices.contains(indexPath)) {
+            let model = dataArray[indexPath]
+            return ImageCellViewModel(up: String(model.ups), comment: String(model.commentCount), views: String(model.views), imageUrl: model.images?.first?.link)
+        }
+        return nil
+    }
+    
+    func numberOfCells() -> Int {
+        return dataArray.count
+    }
+    
 }
